@@ -5,14 +5,14 @@ const PORT = process.env.port || 3001;
 const express = require('express');
 const app = express();
 
-// requiring the Node.js built-in modules fs and path 
-const fs = require('fs')
-const path = require('path');
+// // requiring the Node.js built-in modules fs and path 
+// const fs = require('fs')
+// const path = require('path');
 
 // Require API Routes and HTML Routes modules located at these folders
 const apiRoutes = require('./Develop/routes/apiRoutes/apiIndex')
-const htmlRoutes = require('./Develop/routes/htmlRoutes/indexHTML')
 const indexRoutes = require('./Develop/routes/apiRoutes/noteRoutes')
+const htmlRoutes = require('./Develop/routes/htmlRoutes/indexHTML')
 
 // MIDDLEWARE 
 
@@ -42,11 +42,6 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, 'Develop/public/index.html'))
 );
 
-// GET Route for notes page
-app.get('/', (req, res) =>
-res.sendFile(path.join(__dirname, 'Develop/public/notes.html'))
-
-);
 
 // Route to add new data
 app.post('/notes', (req, res) => {

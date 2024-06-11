@@ -2,7 +2,6 @@
 Discover Noteworthy, the ultimate destination for effortless note-taking. 
 
 ## Description
-
 Welcome to Noteworthy, your go-to destination for effortless note-taking. With intuitive features and seamless syncing across devices, capturing ideas and staying organized has never been easier. Join our community today and unleash the power of effortless note-taking with Discover Noteworthy.
 
 ## Table of Contents:
@@ -13,6 +12,10 @@ Welcome to Noteworthy, your go-to destination for effortless note-taking. With i
 - [Author](#Author)
 - [Contributions](#Contributions)
 - [License](#License)
+
+1. [Github Repo](#)
+2. [Github Deployment](#)
+
 
 ### Directory Structure
 ```  
@@ -65,10 +68,10 @@ Welcome to Noteworthy, your go-to destination for effortless note-taking. With i
 3. The following message will appear: "App listening at http://localhost:3001"
 > ![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
 4. cmd + click http://localhost:3001
-- ![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
+> ![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
 5. and Enjoy the application in your browser
 6. Ctrl + C in your CLI to terminate 
-- ![Terminating PORT](<Develop/public/assets/images/ctrl + c to cancel live server - img example.png>)
+> ![Terminating PORT](<Develop/public/assets/images/ctrl + c to cancel live server - img example.png>)
 
 ## User Story
 ```md
