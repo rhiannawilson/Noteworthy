@@ -10,9 +10,9 @@ const fs = require('fs')
 const path = require('path');
 
 // Require API Routes and HTML Routes modules located at these folders
-const apiRoutes = require('./Develop/public/assets/routes/apiRoutes')
-const htmlRoutes = require('./Develop/public/assets/routes/htmlRoutes')
-
+const apiRoutes = require('./Develop/routes/apiRoutes/apiIndex')
+const htmlRoutes = require('./Develop/routes/htmlRoutes/indexHTML')
+const indexRoutes = require('./Develop/routes/apiRoutes/noteRoutes')
 
 // MIDDLEWARE 
 
