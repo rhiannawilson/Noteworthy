@@ -47,26 +47,28 @@ Welcome to Noteworthy, your go-to destination for effortless note-taking. With i
 ## Usage & Technical Details
 > - Node Package Manager
 
+#### .gitignore 
+> - node_modules/
+> - .DS_Store
+
 #### Images
 
 ![alt text](<Develop/public/assets/images/Main Note Taker Website Page - img example.png>)
 
 
-#### .gitignore 
-> - node_modules/
-> - .DS_Store
+
 
 #### Usage_Instructions
 1. Open integrated terminal in your code editor
 2. Enter “node server.js” in the command line interface
-![alt text](<Develop/public/assets/images/Terminal - node server.js example img.jpeg>)
+> ![alt text](<Develop/public/assets/images/Terminal - node server.js example img.jpeg>)
 3. The following message will appear: "App listening at http://localhost:3001"
-![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
+> ![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
 4. cmd + click http://localhost:3001
-![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
+- ![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
 5. and Enjoy the application in your browser
 6. Ctrl + C in your CLI to terminate 
-![Terminating PORT](<Develop/public/assets/images/ctrl + c to cancel live server - img example.png>)
+- ![Terminating PORT](<Develop/public/assets/images/ctrl + c to cancel live server - img example.png>)
 
 ## User Story
 ```md
@@ -96,11 +98,10 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 N/A
 
 ## Author
-Rhianna Wilson
+#### Rhianna Wilson
 
 ## Contributions
-### Resources
+#### Resources
 * [Example SVG](https://static.fullstack-bootcamp.com/fullstack-ground/module-10/circle.svg)
 
-## License
-![alt text](https://img.shields.io/badge/License-_MIT-blue.svg)
+## License ![alt text](https://img.shields.io/badge/License-_MIT-blue.svg)
