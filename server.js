@@ -43,6 +43,13 @@ app.get('/', (req, res) =>
 );
 
 
+// Route to add new data
+app.post('/notes', (req, res) => {
+  const newItem = req.body;
+  data.push(newItem);
+  res.status(201).json(newItem);
+});
+
 // this function is used to start the Express server and make it listen for incoming requests on a specified port and executes a callback function that logs a message to the console. 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
