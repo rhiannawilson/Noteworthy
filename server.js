@@ -22,7 +22,7 @@ app.use(express.urlencoded({
 }));
 
 // // Static Files - this middleware function is serving static files from the 'public' directory, when a request is made for a file Express will look for the file in Develop/public directory.
-app.use(express.static('Develop', 'public'));
+app.use(express.static('public'));
 
 // this middleware function parses incoming requests with JSON payloads
 // allows my appliation to handle JSON data sent by clients such as API Requests or AJAX requests 
@@ -42,6 +42,11 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, 'Develop/public/index.html'))
 );
 
+// GET Route for notes page
+app.get('/', (req, res) =>
+res.sendFile(path.join(__dirname, 'Develop/public/notes.html'))
+
+);
 
 // Route to add new data
 app.post('/notes', (req, res) => {
