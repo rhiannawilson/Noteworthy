@@ -18,6 +18,8 @@ function noteCreatedNewNote(body, noteTakerArray) {
         return note;
 };
 
+// functon to delete a note from an array of notes (noteTakerArray) based on its ID (id), 
+// updates the indexes of the remaining notes, and then writes the modified array back to a JSON file (db.json).
 function noteDeleteNote(noteTakerArray, id) {
     let deleteID = parseInt(id);
     noteTakerArray.splice(deleteID, 1);
@@ -35,7 +37,22 @@ function noteDeleteNote(noteTakerArray, id) {
     )
 }
 
+
+// added 12.06.24 - needs reviewing
+function saveNewNote(noteTakerArray, newNote) {
+    // Add the new note to the array
+    noteTakerArray.push(newNote);
+return saveNewNote;
+    // // Write the updated array back to the JSON file
+    // fs.writeFileSync(
+    //     path.join(__dirname, '../db/db.json'),
+    //     JSON.stringify({
+    //         notes: noteTakerArray
+    //     }, null, 2)
+    // );
+}
 module.exports = {
     noteCreatedNewNote,
-    noteDeleteNote
+    noteDeleteNote,
+    saveNewNote
 };

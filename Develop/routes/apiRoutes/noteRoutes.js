@@ -45,6 +45,7 @@ router.post("/notes", async (req, res) => {
     }
   });
   
+  
 // this route deletes a note with a specific id from the existing notes, updates the notes array, saves the updated notes, and then sends a success message back to the client.
 
   router.delete("/notes/:id", async (req, res) => {
