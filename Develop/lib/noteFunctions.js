@@ -1,6 +1,5 @@
 const fs = require("fs");
 
-
 // https://nodejs.org/en/learn/manipulating-files/nodejs-file-paths
 // includes the path module from Node.js's standard library and assigns it the variable named path
 const path = require("path")

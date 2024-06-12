@@ -18,7 +18,7 @@ const { noteCreatedNewNote, noteDeleteNote } = require('../../lib/noteFunctions'
 // "It's essentially like plucking out a tool from a toolbox and giving it a convenient name for frequent use." [REF: Bootcamp Spot - 'Xpert Learning Assistant AI']
 const { v4: uuidv4 } = require("uuid");
 
-
+// this route fetches notes, sends them back as a JSON response if successful, and handles errors by logging them and sending an appropriate error response.
 router.get("/notes", async (req, res) => {
     try {
         // Return the notes as JSON
@@ -31,6 +31,7 @@ router.get("/notes", async (req, res) => {
     }
 });
 
+// this route creates a new note with a unique id, adds it to the existing notes, saves the updated notes, and sends back the newly created note as a JSON response. 
 router.post("/notes", async (req, res) => {
     const newNote = { id: uuidv4(), ...req.body };
   
@@ -44,6 +45,8 @@ router.post("/notes", async (req, res) => {
     }
   });
   
+// this route deletes a note with a specific id from the existing notes, updates the notes array, saves the updated notes, and then sends a success message back to the client.
+
   router.delete("/notes/:id", async (req, res) => {
     const { id } = req.params;
   
