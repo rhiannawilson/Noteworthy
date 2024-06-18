@@ -13,8 +13,26 @@ const util = require("util");
 // grabs a specific functionality from the "uuid" module and it's taking a function from "uuid" that generates a unique identifiers
 // "It's essentially like plucking out a tool from a toolbox and giving it a convenient name for frequent use." [REF: Bootcamp Spot - 'Xpert Learning Assistant AI']
 const { v4: uuidv4 } = require("uuid");
-const readFileAsync = util.promisify("fs.readFile");
-const writeFileAsync = util.promisify("fs.writeFile");
+const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
+
+// Example usage
+async function readAndWriteFile() {
+    try {
+        const data = await readFileAsync('input.txt', 'utf8');
+        console.log(data);  // Print the contents of the file
+
+        const newData = data.toUpperCase(); // Modify the data somehow
+        
+        await writeFileAsync('output.txt', newData);
+        console.log('File has been written');
+    } catch (err) {
+        console.error('Error:', err);
+    }
+}
+
+readAndWriteFile();
+
 class Store { 
     read(){
         return readFileAsync('db/db.json', 'utf8');
@@ -42,11 +60,14 @@ addNote(note){
     .then(() => newNote)
 }
 
-removeNote(id){
-//pulling by the id
-return this.getNotes()
-    .then((notes) => [...notes, newNote])
-    const removeNote = note.filter((note) => note.id !== id);
-    
-}
-}
+removeNote(id) {
+    return this.getNotes()
+        .then((notes) => {
+            // Filter out the note with the provided id
+            const updatedNotes = notes.filter((note) => note.id !== id);
+            return updatedNotes;
+        })
+        .then((updatedNotes) => this.write(updatedNotes));
+}}
+
+

@@ -1,9 +1,21 @@
 const fs = require("fs");
 
+// Attempt to read 'input.txt'
+fs.readFile('apiRoutes.js', 'utf8', (err, data) => {
+  if (err) {
+    if (err.code === 'ENOENT') {
+      console.error('File not found!');
+      return;
+    }
+    console.error('Error reading file:', err);
+    return;
+  }
+  console.log('File contents:', data);
+});
+
 // https://nodejs.org/en/learn/manipulating-files/nodejs-file-paths
 // includes the path module from Node.js's standard library and assigns it the variable named path
 const path = require("path")
-
 
 // this function adds a new note to an array of exisitng notes
 function noteCreatedNewNote(body, noteTakerArray) {
@@ -38,7 +50,6 @@ function noteDeleteNote(noteTakerArray, id) {
 }
 
 
-// added 12.06.24 - needs reviewing
 function saveNewNote(noteTakerArray, newNote) {
     // Add the new note to the array
     noteTakerArray.push(newNote);
@@ -56,3 +67,4 @@ module.exports = {
     noteDeleteNote,
     saveNewNote
 };
+

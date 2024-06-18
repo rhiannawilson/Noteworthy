@@ -5,7 +5,7 @@ const store = require("../db/store") //build and connect with our database
 // fs refers to the file system module in Node.js, specifically using its Promise-based functionality. 
 
 // this route fetches notes, sends them back as a JSON response if successful, and handles errors by logging them and sending an appropriate error response.
-router.get("/notes", async (req, res) => {
+router.get("*", async (req, res) => {
   
 });
 

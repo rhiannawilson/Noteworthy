@@ -13,65 +13,68 @@ Welcome to Noteworthy, your go-to destination for effortless note-taking. With i
 - [Contributions](#Contributions)
 - [License](#License)
 
-1. [Github Repo](#)
-2. [Github Deployment](#)
+1. ![Github Repo](https://github.com/rhiannawilson/Noteworthy)
+2. ![Github Deployment]()
 
 
 ### Directory Structure
 ```  
-├── Develop/ 
-    ├── db/                
-        ├── db.json       
-    ├── lib/    
-        ├── noteFunctions.js 
-    ├── public/  
-        ├── assets/  
+├── NOTEWORTHY/
+    ├── db/  
+        ├── db.json  
+        ├── store.js
+    ├── Develop/ 
+        ├── helpers/    
+            ├── fsUtils.js 
+        ├── lib/  
+            ├── noteFunctions.js
+        ├── middleware/
+            ├── clog.js
+    ├── node_modules/
+    ├── public/            
+        ├── assets/ 
             ├── css/
                 ├── style.css
+            ├── images/
+                ├── AppListening-MessageResponse.png 
+                ├── ctrl+c-cancelLiveServer.png 
+                ├── NoteTaker-WebsitePage.png
+                ├── CLI-nodeServer.js.jpeg
             ├── js/
-                ├── index.js            
-        ├── index.html 
-        ├── notes.html
-    ├── routes/  
-        ├── apiRoutes
-                ├── apiIndex.js
-                ├── noteRoutes.js    
-        ├── htmlRoutes
-                ├── indexHTML.js  
-├── node_modules/           
-├── .gitignore 
-├── LICENSE 
-├── package-lock.json
-├── package.json
-├── README.md
-└── server.js         
+                ├── index.js  
+        ├── index.html
+        ├── notes.html  
+    ├── routes/
+        ├── apiRoutes.js
+        ├── htmlRoutes.js
+    ├── .gitignore 
+    ├── LICENSE 
+    ├── package-lock.json
+    ├── package.json
+    ├── README.md
+    └── server.js         
 ```
 
 ## Usage & Technical Details
 > - Node Package Manager
+> - Express.js
 
 #### .gitignore 
 > - node_modules/
 > - .DS_Store
 
-#### Images
-
-![alt text](<Develop/public/assets/images/Main Note Taker Website Page - img example.png>)
-
-
-
-
 #### Usage_Instructions
 1. Open integrated terminal in your code editor
 2. Enter “node server.js” in the command line interface
-> ![alt text](<Develop/public/assets/images/Terminal - node server.js example img.jpeg>)
+> ![how to run node server.js](./public/assets/images/CLI-nodeServer.js.jpeg)
 3. The following message will appear: "App listening at http://localhost:3001"
-> ![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
+> ![PORT MSG in CLI : App Listening Link](./public/assets/images/AppListening-MessageResponse.png)
 4. cmd + click http://localhost:3001
-> ![PORT MSG in CLI : App Listening Link](./Develop/public/assets/images/App%20Listening%20Message%20Response%20-%20img%20example.png)
-5. and Enjoy the application in your browser
+> ![Noteworthy Intro page](./public/assets/images/NoteWorthy-IntroPage.png)
+5. and Enjoy the application in your browser and try creating a note!
+> ![Noteworthy Notes page](./public/assets/images/Noteworthy-NotesPage.png)
 6. Ctrl + C in your CLI to terminate 
-> ![Terminating PORT](<Develop/public/assets/images/ctrl + c to cancel live server - img example.png>)
+> ![Terminate the live PORT](./public/assets/images/ctrl+c-cancelLiveServer.png)
 
 ## User Story
 ```md
@@ -101,10 +104,9 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 N/A
 
 ## Author
-#### Rhianna Wilson
+#### @RhiannaWilson
 
 ## Contributions
-#### Resources
-* [Example SVG](https://static.fullstack-bootcamp.com/fullstack-ground/module-10/circle.svg)
+- Express Js
 
 ## License ![alt text](https://img.shields.io/badge/License-_MIT-blue.svg)
