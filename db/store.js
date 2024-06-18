@@ -46,7 +46,7 @@ removeNote(id){
 //pulling by the id
 return this.getNotes()
     .then((notes) => [...notes, newNote])
-    //notes.filter
-    .then((updatedNotes) => this.write(updatedNotes))
+    const removeNote = note.filter((note) => note.id !== id);
+    
 }
 }
