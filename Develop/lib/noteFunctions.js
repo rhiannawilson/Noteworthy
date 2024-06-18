@@ -42,14 +42,14 @@ function noteDeleteNote(noteTakerArray, id) {
 function saveNewNote(noteTakerArray, newNote) {
     // Add the new note to the array
     noteTakerArray.push(newNote);
-return saveNewNote;
-    // // Write the updated array back to the JSON file
-    // fs.writeFileSync(
-    //     path.join(__dirname, '../db/db.json'),
-    //     JSON.stringify({
-    //         notes: noteTakerArray
-    //     }, null, 2)
-    // );
+
+    // Write the updated array back to the JSON file
+    fs.writeFileSync(
+        path.join(__dirname, '../db/db.json'),
+        JSON.stringify({
+            notes: noteTakerArray
+        }, null, 2)
+    );
 }
 module.exports = {
     noteCreatedNewNote,

@@ -192,3 +192,33 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
+
+
+const router = require('express').Router();
+
+// import files containing our routes
+
+const apiIndexRouter = require('.../apiIndex.js')
+const noteRouter = require('.../noteRoutes.js')
+
+
+router.use('.../apiIndex', apiIndexRouter);
+router.use('.../noteRoutes', noteRouter);
+
+
+// router.get('/notes', (req, res, next) => {
+//     try {
+//         res.sendFile(path.join(__dirname, '../../public/notes.html'));
+//     } catch (error) {
+//         next(error);
+//     }
+// });
+
+// router.get("*", (req, res, next) => {
+//     try {
+//         res.sendFile(path.join(__dirname, '../../public/index.html'));
+//     } catch (error) {
+//         next(error);
+//     }
+// });
